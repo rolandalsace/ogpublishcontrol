@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.1" type="plugin" group="system" method="upgrade">
+	<name>OGPublishControls</name>
+	<author>Roland Leicher - F-68800 Thann</author>
+	<creationDate>2019-04-11</creationDate>
+	<copyright>Copyright (C) 2019 - today Roland Leicher. All rights reserved.</copyright>
+	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+	<authorEmail>contact@ordi-genie.com</authorEmail>
+	<authorUrl>www.ordi-genie.com</authorUrl>
+	<version>1.0.1</version>
+	<description>PLG_OGPUBLISHCONTROLS_XML_DESCRIPTION</description>
+	<files>
+		<filename plugin="ogpublishcontrols">ogpublishcontrols.php</filename>
+		<filename>index.html</filename>
+		<folder>language</folder>
+	</files>
+	<scriptfile>install.php</scriptfile>
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+	 			<field type="spacer" name="spacer_etats" class="text"
+					label="PLG_OGPUBLISHCONTROLS_CATEGORY_CONTROLS"
+				/>	
+			
+				<field
+					name="check_category_last_son"
+					type="radio"
+					label="PLG_OGPUBLISHCONTROLS_CATEGORY_CHECK_LAST_SON_LABEL"
+					description="PLG_OGPUBLISHCONTROLS_CATEGORY_CHECK_LAST_SON_DESC"
+					class="btn-group btn-group-yesno"
+					default="0"
+					>
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field name="usergroups_publish_in_categories_nodes_from_com_content" type="usergrouplist"
+					label="PLG_OGPUBLISHCONTROLS_CONFIG_CONTENT_CATEGORIES_NODES_PUBLISH_USER_GROUPS_LABEL"
+					description="PLG_OGPUBLISHCONTROLS_CONFIG_CONTENT_CATEGORIES_NODES_PUBLISH_USER_GROUPS_DESC" 
+					multiple="true" 
+					size="12"
+					showon="check_category_last_son:1"
+				/>
+				<field type="spacer" name="spacer1_hr" class="text" hr="true"/>
+				<field
+					name="check_com_content_create_categories"
+					type="radio"
+					label="PLG_OGPUBLISHCONTROLS_CATEGORY_CHECK_CO_CONTENT_CREATE_CATEGORIES_LABEL"
+					description="PLG_OGPUBLISHCONTROLS_CATEGORY_CHECK_CO_CONTENT_CREATE_CATEGORIES_DESC"
+					class="btn-group btn-group-yesno"
+					default="0"
+					>
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field name="usergroups_create_categories_from_com_content" type="usergrouplist"
+					label="PLG_OGPUBLISHCONTROLS_CONFIG_CONTENT_CATEGORIES_CREATE_USER_GROUPS_LABEL"
+					description="PLG_OGPUBLISHCONTROLS_CONFIG_CONTENT_CATEGORIES_CREATE_USER_GROUPS_DESC" 
+					multiple="true" 
+					size="12"
+					showon="check_com_content_create_categories:1"
+				/>
+				<field type="spacer" name="spacer2_hr" class="text" hr="true"/>
+				<field
+					name="check_lg_title_and_text"
+					type="radio"
+					label="PLG_OGPUBLISHCONTROLS_CONFIG_CHECK_LG_LABEL"
+					description="PLG_OGPUBLISHCONTROLS_CONFIG_CHECK_LG_DESC"
+					class="btn-group btn-group-yesno"
+					default="0"
+					>
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				
+			</fieldset>					
+		</fields>
+	</config>
+	<!-- UPDATESERVER DEFINITION -->
+	<updateservers>
+		<!-- Note: No spaces or linebreaks allowed between the server tags -->
+		<server type="extension" priority="1" name="R.Leicher Update Site">https://ordi-genie.com/documents/joomla-projects-updates-manifests/plg_system_ogpublishcontrols-update.xml</server>
+	</updateservers>
+	
+</extension>
