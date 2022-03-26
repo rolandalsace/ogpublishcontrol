@@ -8,6 +8,7 @@
  * @copyright   Copyright (C) 2005 - 2014 Open Source Matters, Inc. All rights reserved.
  * @license     GNU General Public License version 2 or later
  */
+
 defined('JPATH_BASE') or die;
 
 /**
