@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @package     JCE
  * @subpackage  System.wf_filesystem_events
