@@ -14,7 +14,6 @@ use Joomla\CMS\Plugin\CMSPlugin as JPlugin;
 use Joomla\CMS\Factory as JFactory;
 use Joomla\CMS\Router\Route as JRoute;
 use Joomla\CMS\Form\Form as JForm;
-
 /**
  *
  */
